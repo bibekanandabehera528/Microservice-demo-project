@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: USERS
+  datasource:
+    url: jdbc:mysql://localhost:3306/practice
+    username: root
+    password: Cvrgu1234@
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+
+server:
+  port: 8081
+user:
+  image:
+    path: D:/Intellij Projects/Projects/Practice/Users/userImages/
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # Eureka server URL
+    fetch-registry: true  # Fetch registry information from the Eureka server
+    register-with-eureka: true  # Register this service with Eureka
